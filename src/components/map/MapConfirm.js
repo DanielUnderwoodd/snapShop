@@ -85,7 +85,7 @@ class MapConfirm extends Component {
                         fill="black"
                       />
                     </svg>
-                    شماره تماس گیرنده
+                    phone number
                   </Form.Label>
                   <Form.Control
                     name="phoneNumber"
@@ -109,7 +109,7 @@ class MapConfirm extends Component {
                         fill="black"
                       />
                     </svg>
-                    آدرس
+                    Address
                   </Form.Label>
                   <Form.Control
                     rows={3}
@@ -124,7 +124,7 @@ class MapConfirm extends Component {
                   className="default-btn"
                   disabled={this.state.disableButton}
                   onClick={this.addAddress}>
-                  اضافه کردن آدرس
+                  Add address
                 </Button>
               </Row>
             </Col>

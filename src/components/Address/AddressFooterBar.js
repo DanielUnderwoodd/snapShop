@@ -3,13 +3,10 @@ import { ListGroup } from "react-bootstrap";
 import { connect } from "react-redux";
 import { remove_address } from "../../actions/customer/customerAuthAction";
 class AddressFooterBar extends Component {
-  removeAddress = (e) => {
-    let locationId = e.target.id;
+  removeAddress = (locationId) => {
     this.props.remove_address(locationId);
   };
-  handleOnClick = (e) => {
-    let locationId = e.target.id;
-
+  handleOnClick = (locationId) => {
     let currentAddress = this.props.address.find(
       (address) => address._id === locationId
     );
@@ -44,7 +41,7 @@ class AddressFooterBar extends Component {
                   </label>
                   <span
                     style={{ marginLeft: "18px" }}
-                    onClick={this.handleOnClick}
+                    onClick={() => this.handleOnClick(address._id)}
                     id={address._id}>
                     <svg
                       width="22"
@@ -62,7 +59,9 @@ class AddressFooterBar extends Component {
                       />
                     </svg>
                   </span>
-                  <span onClick={this.removeAddress} id={address._id}>
+                  <span
+                    onClick={() => this.removeAddress(address._id)}
+                    id={address._id}>
                     <svg
                       width="20"
                       height="21"

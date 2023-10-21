@@ -64,7 +64,7 @@ class MapEdit extends Component {
                       fill="black"
                     />
                   </svg>
-                  شماره تماس گیرنده
+                  phone number
                 </Form.Label>
                 <Form.Control
                   name="phoneNumber"
@@ -88,7 +88,7 @@ class MapEdit extends Component {
                       fill="black"
                     />
                   </svg>
-                  آدرس
+                  Address
                 </Form.Label>
                 <Form.Control
                   rows={3}
@@ -103,7 +103,7 @@ class MapEdit extends Component {
                 className="default-btn"
                 disabled={this.state.disableButton}
                 onClick={this.editAddress}>
-                ویرایش آدرس
+                Edit address
               </Button>
             </Row>
           </Col>

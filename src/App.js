@@ -56,8 +56,7 @@ class App extends Component {
             path="/products/:productId"
             component={ProductPage}
           />
-          <CustomRoute exact path="/" component={MainSection} />
-          \ <CustomRoute component={NotFound} />
+          <CustomRoute exact path="/" component={MainSection} />\{" "}
         </Switch>
 
         <ToastContainer

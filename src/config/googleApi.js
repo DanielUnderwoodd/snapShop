@@ -2,6 +2,7 @@ import axios from "axios";
 
 export default axios.create({
   baseURL: "https://places.googleapis.com/v1/",
+  withCredentials: false,
 
   headers: {
     "Content-Type": "application/json",

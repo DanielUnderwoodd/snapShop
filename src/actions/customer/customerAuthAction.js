@@ -146,6 +146,7 @@ export const add_newAddress = (newAddress) => async (dispatch) => {
   }
 };
 export const remove_address = (locationId) => async (dispatch) => {
+  console.log("SS");
   try {
     const response = await api.delete("/customer/pv/add-address", {
       data: { locationId },
