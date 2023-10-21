@@ -1,0 +1,12 @@
+.product-page .card-img-top {
+  width: 240px;
+  margin: auto;
+  margin-top: 18px;
+}
+
+.product-page .price-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: ltr;
+}

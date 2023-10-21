@@ -1,0 +1,8 @@
+export const SEND_CODE = "SEND_CODE";
+export const SUBMIT_SIGN_IN = "SUBMIT_SIGN_IN";
+export const SUBMIT_SIGN_UP = "SUBMIT_SIGN_UP";
+export const LOG_OUT_CUSTOMER = "LOG_OUT_CUSTOMER";
+export const CLEAN = "CLEAN";
+export const UPDATE_ADDRESS = "UPDATE_ADDRESS";
+export const UPDATE_CUSTOMER_PROFILE = "UPDATE_CUSTOMER_PROFILE";
+export const CLEAN_CART = "CLEAN_CART";

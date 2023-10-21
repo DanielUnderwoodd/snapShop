@@ -1,0 +1,50 @@
+.card {
+  height: 400px;
+  border-radius: 0.5rem;
+}
+.card img {
+  padding: 60px;
+  padding-top: 12px;
+  padding-bottom: 0;
+  height: 170px;
+}
+.card-body p {
+  text-align: center;
+  height: 85px;
+  margin-bottom: 0;
+}
+
+.card-body .price {
+  height: 24px;
+}
+.cart {
+  margin-bottom: 8px;
+}
+.card-body button {
+  background-color: white;
+  border-color: aliceblue;
+}
+.quantity {
+  display: contents !important;
+  color: #ff6a00;
+}
+.add-svg {
+  margin-right: 12px;
+}
+.delete-svg {
+  margin-left: 12px;
+}
+.remove-svg {
+  margin-left: 12px;
+}
+
+.card-body {
+  overflow: hidden;
+  text-align: center;
+}
+
+.react-multi-carousel-list {
+  background-color: #ff6a00;
+  padding: 0.8rem 0px;
+  border-radius: 8px;
+}

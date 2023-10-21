@@ -1,0 +1,9 @@
+export const SUCCESS = "SUCCESS";
+export const SUCCESS_CLEANER = "SUCCESS_CLEANER";
+export const ERROR = "ERROR";
+export const ERROR_CLEANER = "ERROR_CLEANER";
+export const GET_PRODUCT = "GET_PRODUCT";
+export const FRONT_ERROR = "FRONT_ERROR";
+export const CHANGE_CART = "CHANGE_CART";
+export const REMOVE_TO_CART = "REMOVE_TO_CART";
+export const DELETE_TO_CART = "DELETE_TO_CART";

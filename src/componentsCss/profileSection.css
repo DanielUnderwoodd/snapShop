@@ -1,0 +1,46 @@
+.profile-section{
+
+    text-align: center;
+}
+h3{
+    margin-top: 12px !important;
+}
+.form-group {
+    text-align: right;
+}
+
+.user-info button {
+    border-radius: 6px !important;
+    background:   #FF6A00;
+    border-color: #FF6A00;
+    color: white;
+    font-size: 0.8rem;
+    width: 25%;
+    text-align: center;
+}
+.profile-navigation {
+    text-align: right;
+}
+.profile ul  {
+    display: flex;
+    list-style-type: none;
+    padding: 20px 0;
+    justify-content: center;
+    margin: auto;
+}
+.profile li:nth-child(3){
+    margin-right: auto !important;
+}
+.profile li:nth-child(2){
+    margin-right: 12px ;
+}
+.profile li {
+    cursor: pointer;
+}
+.address {
+    margin-top: 20px;
+}
+.add-address{
+    text-align: right;
+    cursor: pointer;
+}

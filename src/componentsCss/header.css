@@ -1,0 +1,60 @@
+.header-navabr {
+  background-color: white;
+}
+
+.row {
+  padding: 16px;
+}
+.col-align {
+  text-align: center;
+}
+
+.search-bar input {
+  border-radius: 25rem !important;
+  border-color: #ff6a00;
+  border-width: 2px;
+  text-align: left;
+}
+
+.register {
+  background: white !important;
+  border-width: 2px !important;
+  color: #ff6a00 !important;
+  height: 45px !important;
+  font-size: 12px !important;
+}
+.goods {
+  background: #ff6a00 !important;
+
+  border-width: 2px !important;
+  color: white !important;
+  height: 45px !important;
+  font-size: 12px !important;
+}
+
+.map-marker img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+}
+
+.address-list {
+  z-index: 1;
+  height: 200px;
+
+  width: 94%;
+  position: absolute;
+  display: block;
+  overflow-y: scroll;
+}
+
+.btn .badge {
+  background-color: white !important;
+  color: black;
+  font-size: 100% !important;
+  top: -10px !important;
+}
+.rounded-pill {
+  border: 2px solid;
+}

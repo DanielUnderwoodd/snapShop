@@ -1,0 +1,25 @@
+.search-bar .dropdown {
+  width: 100%;
+}
+.dropdown-menu.show {
+  width: inherit;
+  transform: none !important;
+  max-height: 300px !important;
+  overflow-y: auto;
+}
+
+.dropdown button {
+  display: none;
+}
+
+.dropdown-menu.show .dropdown-item {
+  white-space: break-spaces !important;
+}
+
+.dropdown-menu.show .dropdown-item a {
+  color: black !important;
+}
+
+.search-bar input {
+  direction: ltr;
+}

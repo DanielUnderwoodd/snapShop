@@ -1,0 +1,53 @@
+body {
+  background-color: #eeeeee;
+  font-family: "Sahel" !important;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+.container-resize {
+  margin: auto;
+  max-width: 1436px;
+  padding: 0px 10px;
+}
+
+.header-backgorund-color {
+  background-color: white;
+}
+
+.btn-primary {
+  border-radius: 25rem;
+  border-color: #ff6a00 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-color: #ff6a00;
+}
+
+.Toastify {
+  text-align: center;
+}
+
+.toast::before {
+  filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px -3px 1px);
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 30px;
+  border-bottom: 10px solid rgb(255, 255, 255);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.default-btn {
+  border-radius: 25rem;
+  background: #ff6a00;
+  border-color: #ff6a00;
+  color: white;
+  margin-right: 24px;
+}

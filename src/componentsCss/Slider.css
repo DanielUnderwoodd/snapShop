@@ -1,0 +1,16 @@
+.slider {
+  position: relative;
+  text-align: right;
+}
+.slider .btn {
+  margin-bottom: 12px;
+  margin-top: 12px;
+  margin-right: auto;
+  color: #ff6a00;
+  border-color: #ff6a00 !important;
+  border-radius: 0.75em;
+}
+
+.slider h3 {
+  text-align: right;
+}

@@ -1,0 +1,15 @@
+.card-body button:focus,
+.card-body button:active,
+.card-body button:hover {
+  background-color: white !important;
+}
+.sidebar button,
+.sidebar button:focus,
+.sidebar button:active,
+.sidebar button:hover {
+  background-color: white !important;
+}
+
+.cart button {
+  color: black !important;
+}

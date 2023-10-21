@@ -1,0 +1,42 @@
+/* Sidebar Container */
+.sidebar {
+  text-align: center;
+  width: 320px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: white;
+  padding-top: 20px;
+  transition: width 0.5s; /* Add a transition for smooth animation */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar .row {
+  align-items: center;
+  justify-content: center;
+}
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+  width: 0px; /* Adjust the collapsed width as desired */
+}
+
+/* Rest of your styling remains the same */
+.adjust-last-element {
+  padding-bottom: 90px;
+}
+
+.back-btn svg {
+  transform: scaleX(-1);
+}
+
+.sidebar2-row {
+  justify-content: flex-end !important;
+}
+
+.mb-3 .form-check-label {
+  padding-left: 12px;
+  padding-right: 20px;
+}

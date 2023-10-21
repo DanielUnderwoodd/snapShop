@@ -1,0 +1,21 @@
+.modal-title {
+    margin: auto;
+    text-align: center;
+}
+.modal-header {
+    direction: ltr;
+}
+.modal-header .close {
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.submit-btn-code-form {
+    width: 80%!important;
+    background-color: #FF6A00 !important;
+}
+.arrow-left {
+    height: 100%;
+    margin: auto 0;
+}

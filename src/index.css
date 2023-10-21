@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+svg:focus,
+svg:active {
+  outline: none;
+}
+svg {
+  cursor: pointer;
+}

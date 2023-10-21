@@ -1,0 +1,20 @@
+#popover-contained {
+  transform: translate(-100px, 60px) !important;
+}
+.arrow,
+.arrow::after {
+  display: none !important;
+}
+#popover-contained ul {
+  display: flex;
+  list-style-type: none;
+  padding: 20px 0;
+  margin: auto;
+}
+ul li {
+  padding: 0px 12px;
+  font-size: 14px;
+}
+.popover-footer li:nth-child(2) {
+  white-space: nowrap;
+}

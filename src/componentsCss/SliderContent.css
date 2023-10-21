@@ -1,0 +1,20 @@
+.slider-button {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  padding: 18px;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  background-color: white;
+  border-top: 2px solid rgba(0, 0, 0, 0.1); /* Red border with a width of 2 pixels */
+}
+
+.slider-button button,
+.slider-button button:focus,
+.slider-button button:active,
+.slider-button button:hover {
+  background-color: white !important;
+  color: black;
+}
