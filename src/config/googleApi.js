@@ -1,9 +1,7 @@
 import axios from "axios";
-axios.defaults.withCredentials = true;
 
 export default axios.create({
   baseURL: "https://places.googleapis.com/v1/",
-  withCredentials: true,
 
   headers: {
     "Content-Type": "application/json",
