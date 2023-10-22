@@ -6,13 +6,7 @@ import Sidebar2 from "./Sidebar2";
 import Sidebar3 from "./Sidebar3";
 import { check_out } from "../../actions/customer/customerAuthAction";
 
-function SidebarContent({
-  toggleSidebar,
-  cart,
-  setLoginModal,
-  isLogIn,
-  check_out,
-}) {
+function SidebarContent({ cart, setLoginModal, isLogIn, check_out }) {
   const [step, setStep] = useState(1);
   const [selectedAddress, setSelectedAddress] = useState("");
   const [payment, setPayment] = useState("");
@@ -47,7 +41,6 @@ function SidebarContent({
     <>
       {step === 1 && (
         <Sidebar1
-          toggleSidebar={toggleSidebar}
           data={cart}
           setLoginModal={setLoginModal}
           isLogIn={isLogIn}

@@ -48,3 +48,12 @@
   padding: 0.8rem 0px;
   border-radius: 8px;
 }
+
+@media (max-width: 576px) {
+  .card img {
+    padding: 5px;
+    padding-top: 12px;
+    padding-bottom: 0;
+    height: 170px;
+  }
+}

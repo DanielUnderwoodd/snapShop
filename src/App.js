@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import MediaQuery from "react-responsive";
 import CustomRoute from "./customRoutes/customRoute";
 import MainHeader from "./components/header/MainHeader";
 import Profile from "./components/Customer/Profile";
@@ -12,6 +13,8 @@ import "./App.css";
 import ProductPage from "./components/ProductPage/ProductPage";
 import NotFound from "./components/NotFound";
 import { Switch } from "react-router-dom/cjs/react-router-dom";
+import Footer from "./components/Footer";
+import SiderbarProvider from "./provider/SidebarProvider";
 
 class App extends Component {
   componentDidUpdate() {
@@ -43,21 +46,27 @@ class App extends Component {
   render() {
     return (
       <div>
-        <MainHeader />
-        <Switch>
-          <CustomRoute
-            condition="Customer"
-            exact
-            path="/customer/profile"
-            component={Profile}
-          />
-          <CustomRoute
-            exact
-            path="/products/:productId"
-            component={ProductPage}
-          />
-          <CustomRoute exact path="/" component={MainSection} />\{" "}
-        </Switch>
+        <SiderbarProvider>
+          <MainHeader />
+          <Switch>
+            <CustomRoute
+              condition="Customer"
+              exact
+              path="/customer/profile"
+              component={Profile}
+            />
+            <CustomRoute
+              exact
+              path="/products/:productId"
+              component={ProductPage}
+            />
+            <CustomRoute exact path="/" component={MainSection} />\{" "}
+            <CustomRoute component={NotFound} />
+          </Switch>
+          <MediaQuery maxWidth={768}>
+            <Footer />
+          </MediaQuery>
+        </SiderbarProvider>
 
         <ToastContainer
           position="bottom-center"

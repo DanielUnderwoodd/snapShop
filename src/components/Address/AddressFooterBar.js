@@ -35,7 +35,7 @@ class AddressFooterBar extends Component {
           {this.props.address.map((address, index) => (
             <ListGroup.Item key={index}>
               <div>
-                <div>
+                <div className="address-footer">
                   <label style={{ width: "85%", textAlign: "right" }}>
                     {address.location}
                   </label>

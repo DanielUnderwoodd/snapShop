@@ -1,0 +1,34 @@
+.footer {
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  position: sticky;
+  bottom: 0;
+  text-align: center;
+}
+.vertical-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vertical-stack svg {
+  width: 33px;
+  height: 28px;
+  fill: #ff6a00 !important;
+}
+.vertical-stack a {
+  color: black;
+}
+
+.vertical-stack .badge {
+  background-color: white !important;
+  color: black;
+  font-size: 70% !important;
+  top: -16px !important;
+}
+
+@media (max-width: 576px) {
+  .address-footer label {
+    width: 100% !important;
+  }
+}

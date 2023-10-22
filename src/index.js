@@ -4,7 +4,7 @@ import App from "./App";
 import Loading from "./components/Loading";
 import { Provider } from "react-redux";
 import configureStore from "./config/configureStore";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import "./index.css";
 import { disableReactDevTools } from "@fvilers/disable-react-devtools";
 
@@ -15,9 +15,9 @@ const { persistor, store } = configureStore();
 function Main() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   );
 }

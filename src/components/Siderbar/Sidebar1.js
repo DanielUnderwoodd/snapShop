@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Button, Row, Col } from "react-bootstrap";
 import { ReactComponent as Arrow } from "../../img/back_arrow.svg";
 import { ReactComponent as Delete } from "../../img/delete.svg";
 import { useDispatch } from "react-redux";
 
 import SidebarButton from "./SidebarButton";
-
+import {
+  SiderbarContext,
+  SiderbarContextDispatchContext,
+} from "../../context/SidebarContext";
 import shortid from "shortid";
 import { CLEAN_CART } from "../../actionTypes/customer/customerActionTypes";
 
-export default function Sidebar1({
-  toggleSidebar,
-  data,
-  setLoginModal,
-  isLogIn,
-  nextStep,
-}) {
+export default function Sidebar1({ data, setLoginModal, isLogIn, nextStep }) {
+  const state = useContext(SiderbarContext);
+  const contextDispatch = useContext(SiderbarContextDispatchContext);
+
   useEffect(() => {
     let price = data.reduce(
       (accumulator, currentObject) =>
@@ -35,7 +35,14 @@ export default function Sidebar1({
     <>
       <Row>
         <Col xs={2}>
-          <Arrow onClick={toggleSidebar} />{" "}
+          <Arrow
+            onClick={() => {
+              contextDispatch({
+                type: "SET_OPEN",
+                payload: !state.isOpen,
+              });
+            }}
+          />{" "}
         </Col>
         <Col xs={8}>My cart ({data.length})</Col>
         <Col xs={2}>

@@ -57,7 +57,7 @@ class PersonalInformation extends Component {
         <ListGroup.Item>
           <Form className="user-info">
             <Row>
-              <Col>
+              <Col xs={12} sm={6}>
                 <Form.Group>
                   <Form.Label>Name </Form.Label>
                   <Form.Control
@@ -68,7 +68,7 @@ class PersonalInformation extends Component {
                   />
                 </Form.Group>
               </Col>
-              <Col>
+              <Col xs={12} sm={6}>
                 <Form.Group>
                   <Form.Label> Last Name</Form.Label>
                   <Form.Control
@@ -81,7 +81,7 @@ class PersonalInformation extends Component {
               </Col>
             </Row>
             <Row>
-              <Col>
+              <Col xs={12} sm={12} lg={6}>
                 <Form.Group>
                   <Form.Label> Phone number </Form.Label>
                   <Form.Control
@@ -91,7 +91,7 @@ class PersonalInformation extends Component {
                   />
                 </Form.Group>
               </Col>
-              <Col>
+              <Col xs={12} sm={12} lg={6}>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
                   <Form.Control
