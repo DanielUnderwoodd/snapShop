@@ -6,7 +6,7 @@ export default axios.create({
 
   headers: {
     "Content-Type": "application/json",
-    "X-Goog-Api-Key": `${process.env.GOOGLE_MAP_API_KEY}`,
+    "X-Goog-Api-Key": "AIzaSyBuPC-JrJ8gg5818O-sTiJShGY35s2OupE",
     "X-Goog-FieldMask": "places.id,places.formattedAddress,places.location",
   },
 });
