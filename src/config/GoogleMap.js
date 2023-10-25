@@ -12,7 +12,7 @@ export default function GoogleMap({ children, onClick, centerLocation }) {
   return (
     <>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.GOOGLE_MAP_API_KEY }}
+        bootstrapURLKeys={{ key: `${process.env.GOOGLE_MAP_API_KEY}` }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
         center={centerLocation}
