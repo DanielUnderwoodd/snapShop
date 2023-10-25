@@ -38,8 +38,9 @@ export default function Footer() {
 
         <Col>
           <div className="vertical-stack">
-            <HomeLogo />
             <Link to="/">
+              <HomeLogo />
+
               <span>Home</span>
             </Link>
           </div>
