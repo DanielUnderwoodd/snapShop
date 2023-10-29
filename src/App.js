@@ -63,7 +63,7 @@ class App extends Component {
             <CustomRoute exact path="/" component={MainSection} />\{" "}
             <CustomRoute component={NotFound} />
           </Switch>
-          <MediaQuery maxWidth={768}>
+          <MediaQuery maxWidth={992}>
             <Footer />
           </MediaQuery>
         </SiderbarProvider>
