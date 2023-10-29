@@ -56,28 +56,32 @@ class Header extends Component {
           </Sidebar>
         )}
         <Row className="align-items-center">
-          <MediaQuery minWidth={896}>
-            <Cart cart={cart} />
+          <MediaQuery minWidth={992}>
+            <Col className="col-align" sm={2}>
+              <Cart cart={cart} />
+            </Col>
           </MediaQuery>
 
           {this.props.isLogIn ? (
             <Authenticate />
           ) : (
             <>
-              <MediaQuery minWidth={794}>
-                <Col className="col-align">
+              <MediaQuery minWidth={767.3}>
+                <Col className="col-align" md={3} sm={2} lg={2}>
                   <Button className="register" onClick={this.setModalShow}>
                     <ProfileLogo />
                     Login/Register
                   </Button>
                 </Col>
               </MediaQuery>
-              <MediaQuery maxWidth={794}>
-                <ProfileLogo onClick={this.setModalShow} />
+              <MediaQuery maxWidth={767.3}>
+                <Col className="col-align" xs={1} sm={1} md={1} lg={1}>
+                  <ProfileLogo onClick={this.setModalShow} />
+                </Col>
               </MediaQuery>
             </>
           )}
-          <Col className="col-align" xs={10} sm={6} md={6}>
+          <Col className="col-align" xs={11} sm={9} md={7} lg={6}>
             <Form inline className="search-bar d-inline w-50">
               <InputGroup>
                 <SearchProvider>
@@ -87,7 +91,7 @@ class Header extends Component {
             </Form>
           </Col>
           <MediaQuery minWidth={576}>
-            <Col>
+            <Col className="col-align" sm={2} md={2} lg={2}>
               <Logo />
             </Col>
           </MediaQuery>

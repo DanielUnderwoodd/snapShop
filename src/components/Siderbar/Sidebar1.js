@@ -19,7 +19,7 @@ export default function Sidebar1({ data, setLoginModal, isLogIn, nextStep }) {
   useEffect(() => {
     let price = data.reduce(
       (accumulator, currentObject) =>
-        accumulator + currentObject.price * currentObject.quantity,
+        Math.round(accumulator + currentObject.price * currentObject.quantity),
       0
     );
     setPrice(price);
@@ -30,6 +30,13 @@ export default function Sidebar1({ data, setLoginModal, isLogIn, nextStep }) {
     dispatch({
       type: CLEAN_CART,
     });
+  };
+  const setLoginCLose = () => {
+    contextDispatch({
+      type: "SET_OPEN",
+      payload: false,
+    });
+    setLoginModal();
   };
   return (
     <>
@@ -73,7 +80,7 @@ export default function Sidebar1({ data, setLoginModal, isLogIn, nextStep }) {
         {isLogIn ? (
           <Button onClick={() => nextStep()}>Next </Button>
         ) : (
-          <Button onClick={setLoginModal}>Login/Register </Button>
+          <Button onClick={setLoginCLose}>Login/Register </Button>
         )}
       </div>
     </>

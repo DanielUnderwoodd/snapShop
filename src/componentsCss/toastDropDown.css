@@ -1,6 +1,6 @@
-#popover-contained {
+/* #popover-contained {
   transform: translate(-100px, 60px) !important;
-}
+} */
 .arrow,
 .arrow::after {
   display: none !important;

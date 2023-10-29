@@ -1,9 +1,10 @@
 .footer {
   background-color: rgb(255, 255, 255);
   padding: 15px;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   text-align: center;
+  width: 100%;
 }
 .vertical-stack {
   display: flex;
@@ -18,6 +19,9 @@
 }
 .vertical-stack a {
   color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .vertical-stack .badge {

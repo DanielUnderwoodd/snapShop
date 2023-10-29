@@ -44,7 +44,7 @@ class Authenticate extends Component {
   };
   render() {
     return (
-      <div ref={this.overLayRef} className="col col-align">
+      <div ref={this.overLayRef} className=" col-align">
         <MediaQuery minWidth={794}>
           <Button className="register" onClick={this.toggleShowButton}>
             <ProfileLogo />

@@ -40,7 +40,6 @@ export default function CarouselCustom({ children }) {
         itemClass="carousel-item-padding-40-px">
         {children}
       </Carousel>
-      ;
     </>
   );
 }
