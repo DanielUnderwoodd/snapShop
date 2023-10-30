@@ -3,7 +3,7 @@ import MediaQuery from "react-responsive";
 import CustomRoute from "./customRoutes/customRoute";
 import MainHeader from "./components/header/MainHeader";
 import Profile from "./components/Customer/Profile";
-import MainSection from "./components/mainSection/MainSection";
+import MemoizedMainSection from "./components/mainSection/MainSection";
 import { connect } from "react-redux";
 import { error_cleaner, success_cleaner } from "./actions/public/publicAction";
 import { ToastContainer, toast } from "react-toastify";
@@ -60,7 +60,7 @@ class App extends Component {
               path="/products/:productId"
               component={ProductPage}
             />
-            <CustomRoute exact path="/" component={MainSection} />\{" "}
+            <CustomRoute exact path="/" component={MemoizedMainSection} />\{" "}
             <CustomRoute component={NotFound} />
           </Switch>
           <MediaQuery maxWidth={992}>

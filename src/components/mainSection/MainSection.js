@@ -28,26 +28,33 @@ class MainSection extends Component {
     return (
       <div className="slider">
         <Container>
-          {this.props.products.map((category) => {
+          {this.props.products.map((category, index) => {
             return (
               <React.Fragment key={shortid.generate()}>
                 <div style={{ display: "flex" }}>
                   <h3>{category.categoryName}</h3>
                 </div>
-                <CarouselCustom>
-                  {category.products.map((product) => {
-                    let { id, image, title, price } = product;
-                    return (
-                      <ECommerceCard
-                        id={id}
-                        img={image}
-                        text={title}
-                        price={price}
-                        key={shortid.generate()}
-                      />
-                    );
-                  })}
-                </CarouselCustom>
+                <div
+                  className={
+                    this.props.products.length === index + 1
+                      ? "last-carousel"
+                      : ""
+                  }>
+                  <CarouselCustom>
+                    {category.products.map((product) => {
+                      let { id, image, title, price } = product;
+                      return (
+                        <ECommerceCard
+                          id={id}
+                          img={image}
+                          text={title}
+                          price={price}
+                          key={shortid.generate()}
+                        />
+                      );
+                    })}
+                  </CarouselCustom>
+                </div>
               </React.Fragment>
             );
           })}
@@ -65,6 +72,8 @@ const mapPropsToState = (state) => {
   };
 };
 
+const MemoizedMainSection = React.memo(MainSection);
+
 export default connect(mapPropsToState, {
   get_product,
-})(MainSection);
+})(MemoizedMainSection);

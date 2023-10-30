@@ -19,7 +19,7 @@ class MainHeader extends Component {
     return (
       <div>
         <Container fluid className="header-backgorund-color">
-          <div className="container-resize" style={{ marginBottom: "50px" }}>
+          <div className="container-resize" style={{ marginBottom: "20px" }}>
             <Header />
           </div>
         </Container>

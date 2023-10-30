@@ -81,7 +81,7 @@ class Header extends Component {
               </MediaQuery>
             </>
           )}
-          <Col className="col-align" xs={11} sm={9} md={7} lg={6}>
+          <Col className="col-align" xs={10} sm={9} md={7} lg={6}>
             <Form inline className="search-bar d-inline w-50">
               <InputGroup>
                 <SearchProvider>
