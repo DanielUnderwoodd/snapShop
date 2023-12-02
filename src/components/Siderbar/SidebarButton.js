@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 
 import CartButton from "../Cart/CartButton";
 import { change_cart } from "../../actions/public/publicAction";
-import shortid from "shortid";
 import MemoizedCartImage from "../Cart/CartImage";
 
 function SidebarButton({ product, cart, change_cart }) {

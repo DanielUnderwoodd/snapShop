@@ -16,33 +16,22 @@ function ECommerceCard({ id, text, img, price, change_cart, cart }) {
     } else {
       setQuantity(0);
     }
+  }, [cart, id]);
 
+  useEffect(() => {
     async function fetchData() {
       try {
         const result = await fetch(img);
         const blob = await result.blob();
         const url = URL.createObjectURL(blob);
         setImage(url);
-        console.log("test");
       } catch (e) {
         console.log(e);
       }
     }
     fetchData();
-  }, [cart, id]);
+  }, [price]);
 
-  async function fetchData() {
-    try {
-      const result = await fetch(img);
-      const blob = await result.blob();
-      const url = URL.createObjectURL(blob);
-      setImage(url);
-      console.log("test");
-    } catch (e) {
-      console.log(e);
-    }
-  }
-  fetchData();
   const cartChange = (type) => {
     change_cart({
       type,
@@ -79,6 +68,8 @@ const mapStateToProps = (state) => ({
   cart: state._public.cart,
 });
 
+const MemoizedECommerceCard = React.memo(ECommerceCard);
+
 export default connect(mapStateToProps, {
   change_cart,
-})(ECommerceCard);
+})(MemoizedECommerceCard);
