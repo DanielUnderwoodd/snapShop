@@ -28,7 +28,7 @@ class MainSection extends Component {
   render() {
     return (
       <div className="slider">
-        {this.props.products && isImg ? (
+        {this.props.products ? (
           <Container>
             {this.props.products.map((category, index) => {
               return (
