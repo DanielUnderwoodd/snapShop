@@ -4,9 +4,11 @@ import { Card } from "react-bootstrap";
 import { connect } from "react-redux";
 import { change_cart } from "../../actions/public/publicAction";
 import CartButton from "../Cart/CartButton";
+import SkeletonLoad from "../SkeletonLoad";
 
 function ECommerceCard({ id, text, img, price, change_cart, cart }) {
   const [quantity, setQuantity] = useState(0);
+  const [image, setImage] = useState(null);
   useEffect(() => {
     let selectedProduct = cart.find((product) => id === product.id);
     if (selectedProduct) {
@@ -14,7 +16,21 @@ function ECommerceCard({ id, text, img, price, change_cart, cart }) {
     } else {
       setQuantity(0);
     }
+
+    async function fetchData() {
+      try {
+        const result = await fetch(img);
+        const blob = await result.blob();
+        const url = URL.createObjectURL(blob);
+        setImage(url);
+        console.log("test");
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    fetchData();
   }, [cart, id]);
+
   const cartChange = (type) => {
     change_cart({
       type,
@@ -27,16 +43,22 @@ function ECommerceCard({ id, text, img, price, change_cart, cart }) {
   };
   return (
     <Card>
-      <Card.Img variant="top" src={img} />
-      <Card.Body>
-        <Card.Text>{text}</Card.Text>
-        <hr />
-        <div className="price-cart">
-          <Card.Text className="price"> Price : {price}</Card.Text>
+      {image ? (
+        <>
+          <Card.Img variant="top" src={image} />
+          <Card.Body>
+            <Card.Text>{text}</Card.Text>
+            <hr />
+            <div className="price-cart">
+              <Card.Text className="price"> Price : {price}</Card.Text>
 
-          <CartButton quantity={quantity} cartChange={cartChange} />
-        </div>
-      </Card.Body>
+              <CartButton quantity={quantity} cartChange={cartChange} />
+            </div>
+          </Card.Body>
+        </>
+      ) : (
+        <SkeletonLoad />
+      )}
     </Card>
   );
 }
