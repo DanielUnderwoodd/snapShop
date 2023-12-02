@@ -31,6 +31,18 @@ function ECommerceCard({ id, text, img, price, change_cart, cart }) {
     fetchData();
   }, [cart, id]);
 
+  async function fetchData() {
+    try {
+      const result = await fetch(img);
+      const blob = await result.blob();
+      const url = URL.createObjectURL(blob);
+      setImage(url);
+      console.log("test");
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  fetchData();
   const cartChange = (type) => {
     change_cart({
       type,
