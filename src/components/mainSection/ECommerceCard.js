@@ -6,7 +6,7 @@ import { change_cart } from "../../actions/public/publicAction";
 import CartButton from "../Cart/CartButton";
 import SkeletonLoad from "../SkeletonLoad";
 
-function ECommerceCard({ id, text, img, price, change_cart, cart }) {
+function ECommerceCard({ id, text, img, price, change_cart, cart, products }) {
   const [quantity, setQuantity] = useState(0);
   const [image, setImage] = useState(null);
   useEffect(() => {
@@ -18,19 +18,31 @@ function ECommerceCard({ id, text, img, price, change_cart, cart }) {
     }
   }, [cart, id]);
 
+  // useEffect(() => {
+  //   console.log(text);
+  // }, []);
+
   useEffect(() => {
+    let isMounted = true; // A flag to track whether the component is still mounted
+
     async function fetchData() {
       try {
         const result = await fetch(img);
         const blob = await result.blob();
         const url = URL.createObjectURL(blob);
-        setImage(url);
+        if (isMounted) {
+          setImage(url);
+        }
       } catch (e) {
         console.log(e);
       }
     }
     fetchData();
-  }, [price]);
+
+    return () => {
+      isMounted = false; // Set the flag to false when the component is unmounted
+    };
+  }, [img]);
 
   const cartChange = (type) => {
     change_cart({
@@ -66,10 +78,9 @@ function ECommerceCard({ id, text, img, price, change_cart, cart }) {
 
 const mapStateToProps = (state) => ({
   cart: state._public.cart,
+  products: state._public.Products,
 });
-
-const MemoizedECommerceCard = React.memo(ECommerceCard);
 
 export default connect(mapStateToProps, {
   change_cart,
-})(MemoizedECommerceCard);
+})(ECommerceCard);
