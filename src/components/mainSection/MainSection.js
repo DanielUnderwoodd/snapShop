@@ -21,7 +21,7 @@ class MainSection extends Component {
   };
 
   componentDidMount() {
-    if (!this.props.products) {
+    if (this.props.products.length === 0) {
       this.props.get_product();
     }
   }
@@ -47,7 +47,6 @@ class MainSection extends Component {
                     <CarouselCustom>
                       {category.products.map((product) => {
                         let { id, image, title, price } = product;
-                        console.log("GGGG");
                         return (
                           <ECommerceCard
                             id={id}
