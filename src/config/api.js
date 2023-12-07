@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://srv.netbest.tk/api",
+  baseURL: "https://srv.netbest.online/api",
   withCredentials: true,
 });
 
-//https://srv.netbest.tk/api
+//https://srv.netbest.online/api
 
 // api.interceptors.request.use(
 //   (config) => {
