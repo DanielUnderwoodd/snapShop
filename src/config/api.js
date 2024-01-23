@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://srv.netbest.online/api",
+  baseURL: "https://srv.dgvr.ir/api",
   withCredentials: true,
 });
 
