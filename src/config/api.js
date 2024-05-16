@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://e-commerce.adaptable.app/api",
+  baseURL: "https://srv.danielportfolio.shop/api",
   withCredentials: true,
 });
 
